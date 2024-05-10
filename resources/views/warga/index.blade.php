@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Data Warga</h1>
+	<a href="/addWarga">Tambah data warga</a>
+	<br>
+	<br>
     <table border="1" class="table table-bordered">
 		<tr>
             <th>NIK</th>
