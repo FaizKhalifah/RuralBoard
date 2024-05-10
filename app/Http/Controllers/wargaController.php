@@ -26,7 +26,17 @@ class wargaController extends Controller
         return redirect('/warga');
     }
 
-    public function edit(){
-        
+    public function edit($NIK){
+        $warga = DB::table('warga')->where('NIK',$NIK)->get();
+		return view('warga.edit',['warga' => $warga]);
+    }
+
+    public function editSave(Request $request){
+		DB::table('warga')->where('NIK',$request->NIK)->update([
+			'nama' => $request->nama,
+			'alamat' => $request->alamat,
+			'nomor_telepon' => $request->nomor_telepon
+		]);
+		return redirect('/warga');
     }
 }

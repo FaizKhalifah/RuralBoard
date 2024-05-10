@@ -26,7 +26,7 @@
 			<td>{{ $wrg->alamat }}</td>
 			<td>{{ $wrg->nomor_telepon }}</td>
 			<td>
-				<a>Edit</a>
+				<a href="/editWarga/{{ $wrg->NIK }}">Edit</a>
 				|
 				<a>Hapus</a>
 			</td>
