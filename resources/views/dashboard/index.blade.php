@@ -1,3 +1,4 @@
+@extends('Layouts.layout')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,9 @@
     <title>Dashboard</title>
 </head>
 <body>
+    @section('main')
     <h1>Halo ini adalah dashboard</h1>
+    @endsection
+    
 </body>
 </html>
