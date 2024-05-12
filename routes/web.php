@@ -10,6 +10,6 @@ Route::get('/addWarga',[wargaController::class,'add']);
 Route::post('/addSaveWarga',[wargaController::class,'addSave']);
 Route::get('/editWarga/{NIK}',[wargaController::class,'edit']);
 Route::post('editSaveWarga',[wargaController::class,'editSave']);
-
+Route::get('/deleteWarga/{NIK}',[wargaController::class,'delete']);
 
 

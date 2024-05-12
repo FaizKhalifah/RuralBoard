@@ -28,7 +28,7 @@
 			<td>
 				<a href="/editWarga/{{ $wrg->NIK }}">Edit</a>
 				|
-				<a>Hapus</a>
+				<a href="/deleteWarga/{{$wrg->NIK}}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach

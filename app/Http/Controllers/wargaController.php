@@ -39,4 +39,9 @@ class wargaController extends Controller
 		]);
 		return redirect('/warga');
     }
+
+    public function delete($NIK){
+        DB::table('warga')->where('NIK',$NIK)->delete();
+        return redirect('/warga');
+    }
 }
