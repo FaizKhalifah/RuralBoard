@@ -11,10 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
+       // Migrasi untuk Tabel Proyek
         Schema::create('proyek', function (Blueprint $table) {
             $table->id();
+            $table->string('nomor_surat')->unique();
+            $table->string('nama_proyek');
+            $table->date('tanggal_pelaksanaan');
+            $table->unsignedBigInteger('NIK')->nullable(); 
             $table->timestamps();
+
+            $table->foreign('NIK')->references('NIK')->on('warga')->onDelete('set null'); // Menambah constraint foreign key
         });
+
     }
 
     /**
