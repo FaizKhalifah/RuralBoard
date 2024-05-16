@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('daftar_wargas', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('warga_id')->constrained();
+            $table->string("id_daftar_warga")->primary();
+            $table->index('nik');
+            $table->foreign('nik')->references('nik')->on('wargas')->onDelete('cascade');
             $table->timestamps();
         });
         

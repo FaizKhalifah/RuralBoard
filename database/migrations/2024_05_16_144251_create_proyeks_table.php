@@ -12,15 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('proyeks', function (Blueprint $table) {
-            Schema::create('proyeks', function (Blueprint $table) {
-                $table->id();
-                $table->foreignId('rencana_proyek_id')->constrained();
-                $table->foreignId('daftar_warga_id')->constrained();
-                $table->timestamps();
-            });
-            
+            $table->string("id_proyek")->primary();
+            $table->index('id_rencana_proyek');
+            $table->index('id_daftar_warga');
+            $table->foreign('id_rencana_proyek')->references('id_rencana_proyek')->on('rencana_proyeks')->onDelete('cascade');
+            $table->foreign('id_daftar_warga')->references('id_daftar_warga')->on('daftar_wargas')->onDelete('cascade');
             $table->timestamps();
         });
+        
     }
 
     /**
