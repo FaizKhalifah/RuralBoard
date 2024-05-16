@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('daftar_wargas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('warga_id')->constrained();
             $table->timestamps();
         });
+        
     }
 
     /**

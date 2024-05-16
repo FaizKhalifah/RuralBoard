@@ -13,8 +13,12 @@ return new class extends Migration
     {
         Schema::create('rencana_proyeks', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->decimal('budget', 10, 2);
+            $table->date('tanggal_pelaksanaan');
             $table->timestamps();
         });
+        
     }
 
     /**
