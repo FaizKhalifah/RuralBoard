@@ -22,14 +22,14 @@
 		</tr>
 		@foreach($warga as $wrg)
 		<tr>
-            <td>{{ $wrg->NIK }}</td>
+            <td>{{ $wrg->nik }}</td>
 			<td>{{ $wrg->nama }}</td>
 			<td>{{ $wrg->alamat }}</td>
-			<td>{{ $wrg->nomor_telepon }}</td>
+			<td>{{ $wrg->no_telpon }}</td>
 			<td>
-				<a href="/editWarga/{{ $wrg->NIK }}">Edit</a>
+				<a href="/editWarga/{{ $wrg->nik }}">Edit</a>
 				|
-				<a href="/deleteWarga/{{$wrg->NIK}}">Hapus</a>
+				<a href="/deleteWarga/{{$wrg->nik}}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach

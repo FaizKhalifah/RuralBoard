@@ -17,11 +17,11 @@ class wargaSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
         for($i=0;$i<50;$i++){
-            DB::table('warga')->insert([
-                'NIK' => $faker->unique()->numerify('##############'),
+            DB::table('wargas')->insert([
+                'nik' => $faker->unique()->numerify('##############'),
                 'nama'=>$faker->name,
                 'alamat'=>$faker->address,
-                'nomor_telepon'=>$faker->phoneNumber,
+                'no_telpon'=>$faker->phoneNumber,
             ]);
         }
     }

@@ -17,10 +17,10 @@
  
 	<form action="/addSaveWarga" method="post">
 		{{ csrf_field() }}
-        NIK <input type="text" name="NIK" required="required"> <br/>
+        NIK <input type="text" name="nik" required="required"> <br/>
 		Nama <input type="text" name="nama" required="required"> <br/>
 		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-        No Telepon <input type="text" name="nomor_telepon" required="required"> <br/>
+        No Telepon <input type="text" name="no_telpon" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 </body>

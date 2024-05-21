@@ -17,10 +17,10 @@
 	@foreach($warga as $wrg)
 	<form action="/editSaveWarga" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="NIK" value="{{ $wrg->NIK }}"> <br/>
+		<input type="hidden" name="nik" value="{{ $wrg->nik }}"> <br/>
 		Nama <input type="text" name="nama" value="{{ $wrg->nama }}" required="required"> <br/>
 		Alamat <textarea name="alamat" required="required">{{ $wrg->alamat }}</textarea> <br/>
-		nomor Telepon <input type="number" name="nomor_telepon"  value="{{ $wrg->nomor_telepon }}" required="required"> <br/>
+		nomor Telepon <input type="number" name="no_telpon"  value="{{ $wrg->no_telpon}}" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 	@endforeach
